@@ -8,28 +8,18 @@ class Todo
     @completed= completed
   end
 
-  #def text
-   # @todo
-  #end
-#end
-  # ..
-  # ..
-  # FILL YOUR CODE HERE
-  # ..
-  # ..
-
   def to_displayable_string
-    dspl_str=""
+    displaying_string=""
     if @completed
-      dspl_str += "[X] "
+      displaying_string += "[X] "
     else
-      dspl_str += "[ ] "
+      displaying_string += "[ ] "
     end
-    dspl_str +=@text
+    displaying_string +=@text
     if due_today? == false
-      dspl_str +="#{@due_date}"
+      displaying_string +="#{@due_date}"
     end
-    dspl_str
+    displaying_string
     # FILL YOUR CODE HERE
   end
 
@@ -65,16 +55,6 @@ class TodosList
     @todos.push(todo)
   end
 
-  #def print
-   # @todolist.each do |x|
-   # puts "* get #{x.text}"
-  #end
-
-  # ..
-  # ..
-  # FILL YOUR CODE HERE
-  # ..
-  # ..
 
   def to_displayable_list
     todo_text=[]
